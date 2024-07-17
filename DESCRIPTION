@@ -1,0 +1,17 @@
+Package: trainset19
+Title: Provides the RDP trainset19 16S rRNA Sequence Reference
+Version: 0.0.0.9000
+Authors@R: 
+    person("Patrick", "Schloss", , "pschloss@umich.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-6935-4275"))
+Description: 
+    A data package that provides users of the {phylotypr} package with the
+    reference data needed to classify 16S rRNA gene sequences using the RDP's
+    trainset19 taxonomy reference. The data were originally posted by the RDP 
+    and reformatted for use with mothur. Both the "rdp" and "pds" versions of
+    the trainset19 reference data are available as `trainset19_rdp` and 
+    `trainset19_pds`, respectively.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
