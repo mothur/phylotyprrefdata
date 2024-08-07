@@ -4,6 +4,7 @@
 # trainset19
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 A data package that provides users of the {phylotypr} package with the
@@ -32,6 +33,9 @@ data:
 library(trainset19)
 dim(trainset19_rdp)
 #> [1] 24642     3
+```
+
+``` r
 dim(trainset19_pds)
 #> [1] 24762     3
 ```
