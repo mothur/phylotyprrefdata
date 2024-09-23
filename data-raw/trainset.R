@@ -1,4 +1,4 @@
-install_github("riffomonas/phylotypr")
+devtools::install_github("riffomonas/phylotypr")
 library(phylotypr)
 
 ## code to prepare `trainset19_rdp` dataset goes here
