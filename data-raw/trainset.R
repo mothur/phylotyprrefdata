@@ -1,57 +1,58 @@
 install_github("riffomonas/phylotypr")
 library(phylotypr)
 
-## code to prepare `trainset19_rdp` dataset goes here
-temp_dir <- tempdir()
+## code to prepare `trainset19_rdp` and `trainset19_pds` dataset goes here.
 
-url <- "https://mothur.s3.us-east-2.amazonaws.com/wiki/trainset19_072023.rdp.tgz"
-full_file_name <- basename(url)
-temp_file_name <- paste0(temp_dir, "/", full_file_name)
-download.file(url, temp_file_name)
+## Downloading
+download_trainset <- function(type, directory = temp_dir) {
 
-untar(temp_file_name, exdir = temp_dir)
-fasta <- list.files(paste0(temp_dir, "/trainset19_072023.rdp"),
-                    pattern = ".fasta", full.names = TRUE)
-taxonomy <- list.files(paste0(temp_dir, "/trainset19_072023.rdp"),
-                       pattern = "tax", full.names = TRUE)
+  base_url <- "https://mothur.s3.us-east-2.amazonaws.com/wiki/trainset19_072023"
 
-# fasta <- "benchmarking/trainset19_072023.rdp/trainset19_072023.rdp.fasta"
-# taxonomy <- "benchmarking/trainset19_072023.rdp/trainset19_072023.rdp.tax"
+  url <- paste0(base_url, ".", type, ".tgz")
 
-fasta_df <- read_fasta(fasta)
-genera <- read_taxonomy(taxonomy)
+  temp_file_name <- paste0(directory, "/", basename(url))
 
-trainset19_rdp <- dplyr::inner_join(fasta_df, genera, by = "id")
-trainset19_rdp <- trainset19_rdp[, c("id", "sequence", "taxonomy")]
+  download.file(url, temp_file_name)
 
+  untar(temp_file_name, exdir = directory)
+}
+
+
+## Joining
+join_trainset <- function(type, directory = temp_dir) {
+
+  fasta <- list.files(directory, recursive = TRUE, full.names = TRUE,
+                      pattern = glue::glue("{type}.fasta"))
+  taxonomy <- list.files(directory, recursive = TRUE, full.names = TRUE,
+                         pattern = glue::glue("{type}.tax"))
+
+  fasta_df <- read_fasta(fasta)
+  genera <- read_taxonomy(taxonomy)
+
+  df <- dplyr::inner_join(fasta_df, genera, by = "id")
+  df <- df[, c("id", "sequence", "taxonomy")]
+
+  return(df)
+}
+
+## Creating
+create_data <- function(type) {
+
+  temp_dir <- tempdir()
+
+  download_trainset(type = type,
+                    directory = temp_dir)
+
+  final_dataset <- join_trainset(type = type,
+                                 directory = temp_dir)
+
+  return(final_dataset)
+}
+
+
+## Executing
+trainset19_rdp <- create_data(type = "rdp")
 usethis::use_data(trainset19_rdp, compress = "xz", overwrite = TRUE)
 
-
-
-
-## code to prepare `trainset19_pds` dataset go here
-
-temp_dir <- tempdir()
-
-url <- "https://mothur.s3.us-east-2.amazonaws.com/wiki/trainset19_072023.pds.tgz"
-full_file_name <- basename(url)
-temp_file_name <- paste0(temp_dir, "/", full_file_name)
-download.file(url, temp_file_name)
-
-untar(temp_file_name, exdir = temp_dir)
-fasta <- list.files(paste0(temp_dir, "/trainset19_072023.pds"),
-                    pattern = ".fasta", full.names = TRUE)
-taxonomy <- list.files(paste0(temp_dir, "/trainset19_072023.pds"),
-                       pattern = "tax", full.names = TRUE)
-
-# fasta <- "benchmarking/trainset19_072023.pds/trainset19_072023.pds.fasta"
-# taxonomy <- "benchmarking/trainset19_072023.pds/trainset19_072023.pds.tax"
-
-fasta_df <- read_fasta(fasta)
-genera <- read_taxonomy(taxonomy)
-
-trainset19_pds <- dplyr::inner_join(fasta_df, genera, by = "id")
-trainset19_pds <- trainset19_pds[, c("id", "sequence", "taxonomy")]
-
+trainset19_pds <- create_data(type = "pds")
 usethis::use_data(trainset19_pds, compress = "xz", overwrite = TRUE)
-
