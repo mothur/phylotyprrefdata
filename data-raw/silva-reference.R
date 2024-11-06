@@ -1,4 +1,4 @@
-source("raw-data/utilities.R")
+source("data-raw/utilities.R")
 
 ## Executing
 silva_v138_2_nr <- create_data(version = "silva.nr_v138_2")

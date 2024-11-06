@@ -14,7 +14,7 @@ sequence:
 \item{taxonomy}{Taxonomic string with each level separated with a \verb{;}}
 }
 
-An object of class \code{data.frame} with 8707 rows and 3 columns.
+An object of class \code{data.frame} with 8696 rows and 3 columns.
 }
 \source{
 \itemize{
