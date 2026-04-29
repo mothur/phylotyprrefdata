@@ -69,6 +69,7 @@ nrow(gg_12_1)
 nrow(gg_13_5)
 nrow(gg_13_8)
 nrow(gg_20_10)
+nrow(gg_24_09)
 
 nrow(silva_v119_nr)
 nrow(silva_v119_seed)

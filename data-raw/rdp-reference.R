@@ -1,4 +1,4 @@
-source("raw-data/utilities.R")
+source("data-raw/utilities.R")
 
 ## Executing
 rdp_trainset19 <- create_data(version = "trainset19_072023.rdp")

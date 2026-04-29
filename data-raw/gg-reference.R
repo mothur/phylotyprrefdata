@@ -1,6 +1,9 @@
-source("raw-data/utilities.R")
+source("data-raw/utilities.R")
 
 ## Executing
+gg_24_09 <- create_data(version = "gg_24_09.taxonomy")
+usethis::use_data(gg_24_09, compress = "xz", overwrite = TRUE)
+
 gg_20_10 <- create_data(version = "gg_20_10.taxonomy")
 usethis::use_data(gg_20_10, compress = "xz", overwrite = TRUE)
 

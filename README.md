@@ -4,6 +4,7 @@
 # phylotyprrefdata
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 A data package that provides users of the {phylotypr} package with the
@@ -96,6 +97,8 @@ nrow(gg_13_8)
 #> [1] 203452
 nrow(gg_20_10)
 #> [1] 331269
+nrow(gg_24_09)
+#> [1] 337506
 
 nrow(silva_v119_nr)
 #> [1] 153307
@@ -120,7 +123,7 @@ nrow(silva_v138_1_seed)
 nrow(silva_v138_2_nr)
 #> [1] 164296
 nrow(silva_v138_2_seed)
-#> [1] 8707
+#> [1] 8696
 nrow(silva_v138_nr)
 #> [1] 146796
 nrow(silva_v138_seed)

@@ -488,6 +488,35 @@
 
 
 
+#' Greengenes training set 24_09
+#'
+#' The sequence and taxonomy data for the full-length sequences found in
+#' Greengene's SSU (16S/18S) database version 24_09 for use with the naive
+#' Bayesian classifier as implemented in the `{phylyotypr}` R package. This
+#' includes 335,412 bacterial and 2,094 archaeal sequences. Originally released
+#' by the biocore group in September 2024. Note that the biocore version includes
+#' species names, but these have been removed from the mothur version of the
+#' database. See the pages in the "Sources" section for more information.
+#'
+#' @format
+#' A data frame with 3 columns. Each row represents a different
+#' sequence:
+#' \describe{
+#'   \item{id}{Sequence accession identifier}
+#'   \item{sequence}{DNA sequence string}
+#'   \item{taxonomy}{Taxonomic string with each level separated with a `;`}
+#' }
+#'
+#' @source
+#' * [mothur-formatted files](https://mothur.org/wiki/greengenes2-formatted_databases/)
+#' * [Description of how mothur-formatted files were generated](https://mothur.org/blog/2024/greengenes2_2020_10/)
+#' * [Biocore's release notes for this version](https://github.com/biocore/greengenes2/)
+"gg_24_09"
+
+#' @rdname gg_24_09
+"gg_24_09"
+
+
 
 #' Greengenes training set 20_10
 #'
