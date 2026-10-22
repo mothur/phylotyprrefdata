@@ -1,5 +1,8 @@
 #devtools::install_github("riffomonas/phylotypr")
 library(phylotypr)
+source("data-raw/references_list.R")
+
+
 
 ## Downloading
 download_trainset <- function(version, directory = temp_dir) {
@@ -45,10 +48,15 @@ join_trainset <- function(version, directory = temp_dir) {
 
   genera <- phylotypr::read_taxonomy(taxonomy)
 
-  df <- dplyr::inner_join(fasta_df, genera, by = "id")
-  df <- df[, c("id", "sequence", "taxonomy")]
+  df <- dplyr::inner_join(fasta_df, genera, by = "sequence_name")
+  df <- df[, c("sequence_name", "sequence", "taxonomy")]
 
-  return(df)
+  phylotypr::create_database(
+    df$sequence_name,
+    df$sequence,
+    df$taxonomy,
+    reference_data = references[[version]]
+  )
 }
 
 

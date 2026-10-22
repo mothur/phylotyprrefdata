@@ -5,20 +5,44 @@
 \alias{gg_13_5}
 \title{Greengenes training set 13_8}
 \format{
-A data frame with 3 columns. Each row represents a different
-sequence:
+A \code{classification_database} object that holds two slots: seq_taxonomy_data
+and \code{reference_data.} The seq_taxonomy_data slot is a data.frame containing
 \describe{
-\item{id}{Sequence accession identifier}
+\item{sequence_name}{Sequence accession identifier}
 \item{sequence}{DNA sequence string}
 \item{taxonomy}{Taxonomic string with each level separated with a \verb{;}}
 }
-
-A data frame with 3 columns. Each row represents a different
-sequence:
+The \code{reference_data} slot contains metadata about the database and includes
+fields:
 \describe{
-\item{id}{Sequence accession identifier}
+\item{reference_vendor}{Entity that created original database (e.g., RDP)}
+\item{reference_versions}{The version of database provided by original
+entity}
+\item{reference_usages}{For classification or alignment}
+\item{reference_notes}{Any additional notes about the database. Currently the
+version of phylotypr that provided the database}
+\item{reference_urls}{URLs where database can be obtained}
+\item{reference_citation}{Citation for database in BibTeX format}
+}
+
+A \code{classification_database} object that holds two slots: seq_taxonomy_data
+and \code{reference_data.} The seq_taxonomy_data slot is a data.frame containing
+\describe{
+\item{sequence_name}{Sequence accession identifier}
 \item{sequence}{DNA sequence string}
 \item{taxonomy}{Taxonomic string with each level separated with a \verb{;}}
+}
+The \code{reference_data} slot contains metadata about the database and includes
+fields:
+\describe{
+\item{reference_vendor}{Entity that created original database (e.g., RDP)}
+\item{reference_versions}{The version of database provided by original
+entity}
+\item{reference_usages}{For classification or alignment}
+\item{reference_notes}{Any additional notes about the database. Currently the
+version of phylotypr that provided the database}
+\item{reference_urls}{URLs where database can be obtained}
+\item{reference_citation}{Citation for database in BibTeX format}
 }
 }
 \source{
