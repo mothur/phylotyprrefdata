@@ -891,5 +891,5 @@
 #'
 #' @source
 #' * [mothur-formatted files](https://mothur.org/wiki/greengenes-formatted_databases/)
-#' * [Werner et al.](https://pubmed.ncbi.nlm.nih.gov/21716311/)
+#' * [Werner et al.](<doi:10.1038/ismej.2011.82>)
 "gg_12_1"

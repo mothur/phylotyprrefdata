@@ -28,7 +28,7 @@ version of phylotypr that provided the database}
 \source{
 \itemize{
 \item \href{https://mothur.org/wiki/greengenes-formatted_databases/}{mothur-formatted files}
-\item \href{https://pubmed.ncbi.nlm.nih.gov/21716311/}{Werner et al.}
+\item \href{doi:10.1038/ismej.2011.82}{Werner et al.}
 }
 }
 \usage{

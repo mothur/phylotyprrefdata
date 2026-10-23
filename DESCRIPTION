@@ -1,6 +1,6 @@
 Package: phylotyprrefdata
 Title: Provides the RDP phylotyprrefdata 16S rRNA Sequence Reference
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     person("Patrick", "Schloss", , "pschloss@umich.edu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-6935-4275"))
@@ -18,4 +18,4 @@ Depends:
     R (>= 3.5)
 LazyData: true
 LazyDataCompression: xz
-Config/roxygen2/version: 8.0.0
+Config/roxygen2/version: 8.1.1

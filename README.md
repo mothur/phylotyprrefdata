@@ -56,76 +56,76 @@ Here is a profile of the available reference data:
 ``` r
 library(phylotyprrefdata)
 
-nrow(rdp_trainset10_pds)
-#> [1] 10773
-nrow(rdp_trainset10)
-#> [1] 10650
-nrow(rdp_trainset14_pds)
-#> [1] 10801
-nrow(rdp_trainset14)
-#> [1] 10678
-nrow(rdp_trainset16_pds)
-#> [1] 13335
-nrow(rdp_trainset16)
-#> [1] 13212
-nrow(rdp_trainset18_pds)
-#> [1] 21318
-nrow(rdp_trainset18)
-#> [1] 21195
-nrow(rdp_trainset19_pds)
-#> [1] 24765
-nrow(rdp_trainset19)
-#> [1] 24642
-nrow(rdp_trainset6_pds)
+nrow(rdp_trainset6_pds$seq_taxonomy_data)
 #> [1] 8545
-nrow(rdp_trainset6)
+nrow(rdp_trainset6$seq_taxonomy_data)
 #> [1] 8422
-nrow(rdp_trainset7_pds)
+nrow(rdp_trainset7_pds$seq_taxonomy_data)
 #> [1] 10165
-nrow(rdp_trainset7)
+nrow(rdp_trainset7$seq_taxonomy_data)
 #> [1] 10046
-nrow(rdp_trainset9_pds)
+nrow(rdp_trainset9_pds$seq_taxonomy_data)
 #> [1] 10172
-nrow(rdp_trainset9)
+nrow(rdp_trainset9$seq_taxonomy_data)
 #> [1] 10049
+nrow(rdp_trainset10_pds$seq_taxonomy_data)
+#> [1] 10773
+nrow(rdp_trainset10$seq_taxonomy_data)
+#> [1] 10650
+nrow(rdp_trainset14_pds$seq_taxonomy_data)
+#> [1] 10801
+nrow(rdp_trainset14$seq_taxonomy_data)
+#> [1] 10678
+nrow(rdp_trainset16_pds$seq_taxonomy_data)
+#> [1] 13335
+nrow(rdp_trainset16$seq_taxonomy_data)
+#> [1] 13212
+nrow(rdp_trainset18_pds$seq_taxonomy_data)
+#> [1] 21318
+nrow(rdp_trainset18$seq_taxonomy_data)
+#> [1] 21195
+nrow(rdp_trainset19_pds$seq_taxonomy_data)
+#> [1] 24765
+nrow(rdp_trainset19$seq_taxonomy_data)
+#> [1] 24642
 
-nrow(gg_12_1)
+nrow(gg_12_1$seq_taxonomy_data)
 #> [1] 84414
-nrow(gg_13_5)
+nrow(gg_13_5$seq_taxonomy_data)
 #> [1] 202421
-nrow(gg_13_8)
+nrow(gg_13_8$seq_taxonomy_data)
 #> [1] 203452
-nrow(gg_20_10)
+nrow(gg_20_10$seq_taxonomy_data)
 #> [1] 331269
-nrow(gg_24_09)
+nrow(gg_24_09$seq_taxonomy_data)
 #> [1] 337506
 
-nrow(silva_v119_nr)
+nrow(silva_v119_nr$seq_taxonomy_data)
 #> [1] 153307
-nrow(silva_v119_seed)
+nrow(silva_v119_seed$seq_taxonomy_data)
 #> [1] 15009
-nrow(silva_v123_nr)
+nrow(silva_v123_nr$seq_taxonomy_data)
 #> [1] 172418
-nrow(silva_v123_seed)
+nrow(silva_v123_seed$seq_taxonomy_data)
 #> [1] 14914
-nrow(silva_v128_nr)
+nrow(silva_v128_nr$seq_taxonomy_data)
 #> [1] 190661
-nrow(silva_v128_seed)
+nrow(silva_v128_seed$seq_taxonomy_data)
 #> [1] 11213
-nrow(silva_v132_nr)
+nrow(silva_v132_nr$seq_taxonomy_data)
 #> [1] 213119
-nrow(silva_v132_seed)
+nrow(silva_v132_seed$seq_taxonomy_data)
 #> [1] 11180
-nrow(silva_v138_1_nr)
+nrow(silva_v138_1_nr$seq_taxonomy_data)
 #> [1] 146601
-nrow(silva_v138_1_seed)
+nrow(silva_v138_1_seed$seq_taxonomy_data)
 #> [1] 7641
-nrow(silva_v138_2_nr)
+nrow(silva_v138_2_nr$seq_taxonomy_data)
 #> [1] 164296
-nrow(silva_v138_2_seed)
+nrow(silva_v138_2_seed$seq_taxonomy_data)
 #> [1] 8696
-nrow(silva_v138_nr)
+nrow(silva_v138_nr$seq_taxonomy_data)
 #> [1] 146796
-nrow(silva_v138_seed)
+nrow(silva_v138_seed$seq_taxonomy_data)
 #> [1] 7656
 ```
